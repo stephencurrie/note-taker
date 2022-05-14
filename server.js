@@ -1,4 +1,5 @@
 const express = require('express');
+
 const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 
@@ -11,14 +12,10 @@ app.use(express.static('public'));
 
 //API ROUTES
 
-
-app.use('api', apiRoutes)
-
+app.use('/api', apiRoutes);
 
 //HTML ROUTES
 app.use('/', htmlRoutes);
-
-
 
 
 app.listen(PORT, () =>
